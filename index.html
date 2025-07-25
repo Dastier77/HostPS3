@@ -5,157 +5,89 @@
   <title>Hardware Solution HUB</title>
   <style>
     body {
-      display: none;
       font-family: Arial, sans-serif;
       background-color: #f2f2f2;
+      margin: 0;
       padding: 0;
-      margin: 0;
       color: #333;
+      text-align: center;
     }
-
-    .encabezado {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 15px;
-    }
-
-    .encabezado img {
-      height: 60px;
-    }
-
-    .texto-encabezado h1 {
-      margin: 0;
-      font-size: 28px;
-    }
-
-    .texto-encabezado p {
-      margin: 5px 0 0;
-    }
-
-    header {
-      background-color: #4CAF50;
-      color: white;
+    .contenedor {
+      width: 95%;
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #fff;
       padding: 20px;
-      text-align: center;
+      border: 1px solid #ccc;
     }
-
-    nav {
+    .logo {
+      height: 60px;
+      margin-bottom: 10px;
+    }
+    h1, h2 {
+      margin: 10px 0;
+    }
+    table.menu {
+      width: 100%;
+      margin: 20px 0;
+    }
+    table.menu td {
+      padding: 10px;
       background-color: #333;
-      overflow: hidden;
     }
-
-    nav a {
-      float: left;
-      display: block;
+    table.menu a {
       color: white;
-      text-align: center;
-      padding: 14px 16px;
       text-decoration: none;
+      display: block;
     }
-
-    nav a:hover {
-      background-color: #ddd;
+    table.menu a:hover {
+      background-color: #4CAF50;
       color: black;
     }
-
-    main {
-      padding: 20px;
-    }
-
-    section {
-      background-color: #fff;
-      padding: 15px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    }
-
-    h2 {
-      color: #333;
-    }
-
     ul {
       list-style: none;
       padding: 0;
     }
-
     li {
       margin-bottom: 10px;
     }
-
     footer {
-      text-align: center;
-      padding: 10px;
-      background-color: #ddd;
-      margin-top: 40px;
+      margin-top: 30px;
+      font-size: 14px;
+      color: #666;
     }
-
-    .redes-sociales {
-      margin-top: 10px;
-    }
-
-    .redes-sociales a {
-      margin-right: 15px;
+    .redes a {
+      margin: 0 10px;
       color: #333;
       text-decoration: none;
-      font-size: 18px;
     }
-
-    .redes-sociales a i {
-      margin-right: 8px;
-    }
-
-    .redes-sociales a:hover {
+    .redes a:hover {
       color: #4CAF50;
     }
-
-    .redes-sociales a i.fa-instagram {
-      color: #E1306C;
-    }
-
-    .redes-sociales a i.fa-youtube {
-      color: #FF0000;
-    }
   </style>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const contraseñaCorrecta = '4680'; // 🔑 Cambiá esta clave si querés
-
-      let acceso = prompt("🔒 Página privada: ingrese la contraseña");
-
-      if (acceso === contraseñaCorrecta) {
-        document.body.style.display = 'block';
-      } else {
-        alert("Contraseña incorrecta. Acceso denegado.");
-        document.body.innerHTML = "<h2 style='color:red; text-align:center; padding-top: 100px;'>🔐 Acceso bloqueado</h2>";
-        document.body.style.display = 'block';
-      }
-    });
-  </script>
 </head>
-
 <body>
-  <header>
-    <div class="encabezado">
-      <img src="sources/logoo - copia-fotor-2025041417540.png" alt="Logo de mi sitio">
-      <div class="texto-encabezado">
-        <h1>HARDWARE SOLUTIONS ARG by Dastier</h1>
-        <h2>SERVICIO TECNICO E INSUMOS</h2>
-        <p>HUB PARA HEN PS3</p>
-      </div>
-    </div>
-  </header>
+  <script>
+    var acceso = prompt("🔒 Página privada: ingrese la contraseña");
+    if (acceso !== "4680") {
+      document.write("<h2 style='color:red;'>🔐 Acceso bloqueado</h2>");
+    }
+  </script>
 
-  <nav>
-    <a href="#tiendas">Tiendas</a>
-    <a href="#aplicaciones">Aplicaciones</a>
-  </nav>
+  <div class="contenedor">
+    <img class="logo" src="sources/logoo - copia-fotor-2025041417540.png" alt="Logo">
+    <h1>HARDWARE SOLUTIONS ARG by Dastier</h1>
+    <h2>SERVICIO TECNICO E INSUMOS</h2>
+    <p>HUB PARA HEN PS3</p>
 
-  <main>
-    <section id="tiendas">
+    <table class="menu">
+      <tr>
+        <td><a href="#tiendas">Tiendas</a></td>
+        <td><a href="#aplicaciones">Aplicaciones</a></td>
+      </tr>
+    </table>
+
+    <div id="tiendas">
       <h2>🛍️ Tiendas descarga directa</h2>
       <ul>
         <li><a href="https://drive.google.com/file/d/1xF7mdg6UeF1B__HRD_1_k2ke1SLvkc9X/view?usp=drive_link" target="_blank">Videostore</a></li>
@@ -166,9 +98,9 @@
         <li><a href="https://drive.google.com/file/d/1PVdP_VPVFZmBMBWjkxsH4tZ2L-P_5eGn/view?usp=drive_link" target="_blank">Fix multitiendas 4.92</a></li>
         <li><a href="https://drive.google.com/file/d/1eesIj_C5GhJtQS98-OTx4eBhMJSzhGDq/view?usp=drive_link" target="_blank">15280_Licencias</a></li>
       </ul>
-    </section>
+    </div>
 
-    <section id="aplicaciones">
+    <div id="aplicaciones">
       <h2>📱 Aplicaciones descarga directa</h2>
       <ul>
         <li><a href="https://drive.google.com/file/d/1zNukNFVpYugcdHC7DsZGkJTLhKhAjaKh/view?usp=drive_link" target="_blank">WwebMAN_mod</a></li>
@@ -177,22 +109,16 @@
         <li><a href="https://drive.google.com/file/d/1IpbpYt5pNmnRoHAakYb4M1IcedZENRQV/view?usp=drive_link" target="_blank">Base de datos Pkgi</a></li>
         <li><a href="https://ejercicio-fit.com" target="_blank">App de Ejercicio</a></li>
       </ul>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 Mi Página Web. by Dastier - Todos los derechos reservados.</p>
-    <div class="redes-sociales">
-      <a href="https://www.instagram.com/tuusuario" target="_blank">
-        <i class="fa-brands fa-instagram"></i> Instagram
-      </a>
-      <a href="https://wa.me/5491123456789" target="_blank">
-        <i class="fa-brands fa-whatsapp"></i> WhatsApp
-      </a>
-      <a href="https://www.youtube.com/@tucanal" target="_blank">
-        <i class="fa-brands fa-youtube"></i> YouTube
-      </a>
     </div>
-  </footer>
+
+    <footer>
+      <p>© 2025 Mi Página Web. by Dastier - Todos los derechos reservados.</p>
+      <div class="redes">
+        <a href="https://www.instagram.com/tuusuario" target="_blank">Instagram</a>
+        <a href="https://wa.me/5491123456789" target="_blank">WhatsApp</a>
+        <a href="https://www.youtube.com/@tucanal" target="_blank">YouTube</a>
+      </div>
+    </footer>
+  </div>
 </body>
 </html>
